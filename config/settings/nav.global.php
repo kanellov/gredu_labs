@@ -60,6 +60,28 @@ return [
                 'href'  => '/#forum',
             ],
 
+            'admin' => [
+                'label' => 'Διαχείριση',
+                'route' => 'admin.index',
+            ],
+        ],
+        'admin' => [
+            'dashboard' => [
+                'label' => 'Dashboard',
+                'route' => 'admin.index',
+            ],
+            'users' => [
+                'label' => 'Χρήστες',
+                'route' => 'admin.users',
+            ],
+            'schools' => [
+                'label' => 'Σχολεία',
+                'route' => 'admin.schools',
+            ],
+            'application_forms' => [
+                'label' => 'Αιτήσεις',
+                'route' => 'admin.application_forms',
+            ],
         ],
     ],
 ];

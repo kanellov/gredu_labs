@@ -21,6 +21,7 @@ return [
         'module/schools/bootstrap.php',
         'module/application_form/bootstrap.php',
         'module/tpe_survey/bootstrap.php',
+        'module/admin/bootstrap.php',
     ],
     'cache_config' => 'data/cache/config/settings.php',
 ];

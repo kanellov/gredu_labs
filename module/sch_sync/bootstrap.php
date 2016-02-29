@@ -1,5 +1,6 @@
 <?php
 
+use GrEduLabs\Schools\InputFilter\Lab;
 use GrEduLabs\Schools\InputFilter\School as SchoolInputFilter;
 use GrEduLabs\Schools\Service\AssetServiceInterface;
 use GrEduLabs\Schools\Service\LabServiceInterface;

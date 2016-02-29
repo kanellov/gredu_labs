@@ -1,0 +1,32 @@
+{% extends "admin/layout.twig" %}
+
+{% block adminSubtitle %}Χρηστών{% endblock %}
+
+{% block adminContent %}
+    <div class="table-responsive">
+        <table class="table table-hover table-striped">
+            <thead>
+                <tr>
+                    <th>Ονομασία</th>
+                    <th>Email</th>
+                    <th>Πηγή</th>
+                    <th>Ρόλος</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for user in users %}
+                <tr>
+                    <td>{{ user.display_name }}</td>
+                    <td>{{ user.mail }}</td>
+                    <td>{{ user.authentication_source }}</td>
+                    <td>{{ user.role }}</td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="4" class="text-center">Δεν υπάρχουν χρήστες</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

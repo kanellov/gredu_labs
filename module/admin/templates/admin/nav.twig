@@ -1,0 +1,15 @@
+{% macro li(page) %}
+    <li role="presentation" class="{% if page.active %}active {% endif %}{{ page.class|default('') }}">
+        <a href="{{ page.href }}" {% if page.id %}id="{{ page.id }}"{% endif %} title="{{ page.label|striptags|e }}">
+            <span class="{{ page.labelClass|default('') }}">{{ page.label }}</span>
+        </a>
+    </li>
+{% endmacro %}
+
+{% import _self as macros %}
+
+<ul class="nav nav-stacked nav-pills well well-sm">
+    {% for page in nav('admin') %}
+        {{ macros.li(page)}}
+    {% endfor %}
+</ul>
