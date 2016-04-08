@@ -37,6 +37,10 @@ return function (App $app) {
     }, -1000);
 
     $events('on', 'app.bootstrap', function (App $app, Container $c) {
+        // clear session
+        
+        $c['authentication_service']->clearIdentity();
+        
         $router = $c['router'];
         $router->getNamedRoute('index')->add(function (Request $req, Response $res, $next) use ($c) {
             $view = $c->get('view');
